@@ -3,6 +3,8 @@ using namespace std;
 
 int main() {
   string stringA, stringB;
+  int aSum = 0;
+  int bSum = 0;
   cin >> stringA;
   cin >> stringB;
 
@@ -10,8 +12,22 @@ int main() {
     if (i >= 'A' && i <= 'Z') {
       i += 32;
     }
+    aSum += (int) i;
   }
 
-  cout << stringA << endl;
+  for (auto &i : stringB) {
+    if (i >= 'A' && i <= 'Z') {
+      i += 32;
+    }
+    bSum += (int) i;
+  }
+
+  if (aSum < bSum) {
+    cout << -1 << endl;
+  } else if (bSum < aSum) {
+    cout << 1 << endl;
+  } else if (aSum == bSum) {
+    cout << 0 << endl;
+  }
   return 0;
 }
