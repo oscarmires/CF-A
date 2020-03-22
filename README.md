@@ -1,2 +1,2 @@
 # CF-A
-Solutions for competitive programing exercises (most problems from CodeForces.com)
+Practices exercises for competitive programing problems (most problems from CodeForces.com)
