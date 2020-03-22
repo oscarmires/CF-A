@@ -1,3 +1,6 @@
+// Bear and big brother
+// http://codeforces.com/contest/791/problem/A
+
 #include <iostream>
 
 int main() {

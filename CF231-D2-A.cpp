@@ -1,3 +1,6 @@
+// Team
+// http://codeforces.com/contest/231/problem/A
+
 #include <iostream>
 
 int main() {

@@ -1,3 +1,6 @@
+// Vanya and fence
+// http://codeforces.com/contest/677/problem/A
+
 #include <iostream>
 #include <sstream>
 using namespace std;

@@ -1,3 +1,6 @@
+// Anton and Danik
+// http://codeforces.com/contest/734/problem/A
+
 #include <iostream>
 using namespace std;
 

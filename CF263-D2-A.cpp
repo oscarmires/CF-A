@@ -1,3 +1,6 @@
+// Beautiful matrix
+// http://codeforces.com/contest/263/problem/A
+
 #include <iostream>
 #include <string>
 #include <cmath>
