@@ -5,24 +5,17 @@
 #include <sstream>
 using namespace std;
 
-int main() {
+int n, h, p, w;
 
-  int n = 0;
-  int h = 0;
+int main() {
   int w = 0;
   cin >> n >> h;
-  cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-  string hString, hChar;
-  getline(cin, hString);
-  stringstream ssin(hString);
-  while (ssin.good()) {
-      ssin >> hChar;
-      if (stoi(hChar) <= h) {
-        ++w;
-      } else {
-        w += 2;
-      }
+  for (int i = 0; i < n; ++i) {
+    cin >> p;
+    if (p > h) {
+      ++w;
+    }
+    ++w;
   }
 
   cout << w << endl;;

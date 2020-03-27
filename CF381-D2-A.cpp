@@ -1,35 +1,34 @@
 // Sereja and dima
 // http://codeforces.com/contest/381/problem/A
-// >30 minutes
 
 #include <iostream>
 #include <vector>
 
+int n, x, points, sereja, dima;
+
 int main() {
-  int n;
-  int pointsSereja = 0;
-  int pointsDima = 0;
-  std::string sCards;
-  std::vector<int> cards;
-
   std::cin >> n;
-  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-  std::getline(std::cin, sCards);
-
-  for (auto c : sCards) {
-
-    cards.push_back(c);
+  std::vector<int> cards;
+  for (int i = 0; i < n; ++i) {
+    std::cin >> x;
+    cards.push_back(x);
   }
-
-  std::cout << cards.front() << '\n';
-  std::cout << cards.back() << '\n';
-
-/*
-  while (!cards.empty()) {
+  int points = 0;
+  for (int i = 0; i < n; ++i) {
     if (cards.front() > cards.back()) {
-      pointsSereja +
+      points = cards.front();
+      cards.erase(cards.begin());
+    } else {
+      points = cards.back();
+      cards.erase(cards.end() - 1);
+    }
+    if (i % 2 != 0) {
+      dima += points;
+    } else {
+      sereja += points;
     }
   }
-*/
+
+  std::cout << sereja << " " << dima << '\n';
   return 0;
 }
